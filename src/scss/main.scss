@@ -1,0 +1,94 @@
+@import "_grid.scss";
+@import "_mixin.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+.home {
+    position: relative;
+    margin-top: 95px;
+
+    @media screen and (max-width: $xl) {
+        margin-top: 48px;
+    }
+
+    .info {
+        @include _height(256px, 0);
+
+        .text {
+            @include _height(0, 240px);
+
+            &__title {
+                @include _height(90px, 96px);
+            }
+
+            &__subtitle {
+                @include _height(86px, 136px);
+            }
+        }
+
+        .button {
+            &__touch {
+                @include _height(48px, 0);
+
+                min-width: 248px;
+
+                @media screen and (max-width: $md) {
+                    min-width: 100%;
+                }
+            }
+        }
+
+        .profile {
+            @media screen and (min-width: $md) {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+
+            &__social {
+                @include _height(48px, 0);
+            }
+        }
+    }
+
+    .preview {
+        margin-top: 117px;
+
+        @media screen and (max-width: $lg) {
+            margin-top: 48px;
+        }
+
+        &__about {
+            @include _height(218px, 460px);
+            height: 100%;
+        }
+
+        &__experience {
+            @include _height(218px, 0);
+            margin-bottom: 24px;
+        }
+
+        &__works {
+            @include _height(218px, 0);
+        }
+    }
+}
+
+.block {
+    background-color: #ddd;
+    border: solid 1px red;
+    width: 100%;
+    text-align: center;
+}
