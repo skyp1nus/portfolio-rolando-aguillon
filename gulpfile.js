@@ -30,11 +30,11 @@ const scss = () => {
 const images = () => {
     return src(path.images.src)
     .pipe(newer(path.images.newer))
-    .pipe(imagemin(
-        {
-            verbose: true
-        }
-    ))
+    // .pipe(imagemin(
+    //     {
+    //         verbose: true
+    //     }
+    // ))
     .pipe(dest(path.images.dest))
 }
 
@@ -50,14 +50,14 @@ const svg = () => {
 }
 
 const fonts = () => {
-    return src(path.font.src)
-        .pipe(newer(path.font.newer))
-        .pipe(dest(path.font.dest))
+    return src(path.font.src).pipe(dest(path.font.dest))
 }
 
 const watcher = () => {
     watch(path.html.watch, html);
     watch(path.scss.watch, scss);
+    watch(path.images.watch, images);
+    watch(path.svg.watch, svg);
 }
 
 const server = () => {

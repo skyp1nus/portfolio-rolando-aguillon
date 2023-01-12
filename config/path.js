@@ -21,18 +21,20 @@ module.exports = {
     images: {
         src: pathSrc + "/assets/images/*.png",
         newer: pathDest + "/assets/images/*.png",
+        watch: pathSrc + "/assets/images/*.png",
         dest: pathDest + "/assets/images"
     },
 
     svg: {
         src: pathSrc + "/assets/svg/*.svg",
         newer: pathDest + "/assets/svg/*.svg",
+        watch: pathSrc + "/assets/svg/*.svg",
         dest: pathDest + "/assets/svg"
     },
 
     font: {
-        src: pathSrc + "/assets/fonts/*.{ttf, otf}",
-        newer: pathDest + "/assets/fonts/*.{ttf, otf}",
+        src: pathSrc + "/assets/fonts/*.{ttf, woff, woff2, eot, svg",
+        newer: pathDest + "/assets/fonts/*.{ttf, woff, woff2, eot, svg",
         dest: pathDest + "/assets/fonts"
     }
 }
