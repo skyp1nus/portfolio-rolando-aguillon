@@ -1,0 +1,30 @@
+@import "style/_variable.scss";
+@import "style/_mixin.scss";
+@import "style/_font.scss";
+
+* {
+    box-sizing: border-box;
+    color: $white;
+}
+
+footer {
+    text-align: center;
+}
+
+p {
+    font-family: Agency;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.32em;
+    text-transform: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}

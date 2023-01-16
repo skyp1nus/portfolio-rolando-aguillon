@@ -1,0 +1,25 @@
+$grid-columns:                8;
+$grid-gutter-width:           24px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$dark-grey: #5E5C61;
+$white: #FFFFFF;
+$yellow: #FFE600;
+$turquoise: #0DF4E7;
+$red-light: #D2295A;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 1154px,
+  lg: 1154px,
+  xl: 1154px,
+  xxl: 1224px
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+// 1248 / 8 = 156 - 24 = 132
