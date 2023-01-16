@@ -1,14 +1,15 @@
 @import "style/_variable.scss";
 @import "style/_mixin.scss";
 @import "style/_font.scss";
+@import "style/reset";
 
 * {
-    box-sizing: border-box;
     color: $white;
 }
 
 footer {
     text-align: center;
+    margin: 48.5px 0px 24px 0px;
 }
 
 p {
