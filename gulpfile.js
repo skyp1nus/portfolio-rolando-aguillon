@@ -41,11 +41,11 @@ const images = () => {
 const svg = () => {
     return src(path.svg.src)
         .pipe(newer(path.svg.newer))
-        .pipe(imagemin(
-            {
-                verbose: true
-            }
-        ))
+        // .pipe(imagemin(
+        //     {
+        //         verbose: true
+        //     }
+        // ))
         .pipe(dest(path.svg.dest))
 }
 

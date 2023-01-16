@@ -15,7 +15,7 @@ module.exports = {
     scss: {
         src: pathSrc + "/scss/*.scss",
         watch: pathSrc + "/scss/**/*.scss",
-        dest: pathDest
+        dest: pathDest + "/css"
     },
 
     images: {
@@ -33,8 +33,7 @@ module.exports = {
     },
 
     font: {
-        src: pathSrc + "/assets/fonts/*.{ttf, woff, woff2, eot, svg",
-        newer: pathDest + "/assets/fonts/*.{ttf, woff, woff2, eot, svg",
+        src: pathSrc + "/assets/fonts/*",
         dest: pathDest + "/assets/fonts"
     }
 }
