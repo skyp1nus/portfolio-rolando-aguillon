@@ -1,0 +1,204 @@
+@import "style/_main.scss";
+
+html {
+    background-image: url(../assets/Images/background-about.png);
+}
+
+.about {
+    position: relative;
+    margin-top: 66px;
+}
+
+header {
+    position: relative;
+}
+
+.logo {
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo__title {
+    margin-left: 16px;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.2em;
+}
+
+.social {
+    width: 264px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__avatar {
+    background-image: url(../assets/svg/avatar.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.social__telegram {
+    background-image: url(../assets/svg/telegram.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.social__telegram:hover {
+    background-color: $dark-grey;
+}
+
+.social__linkedin {
+    background-image: url(../assets/svg/linkedin.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.social__linkedin:hover {
+    background-color: $dark-grey;
+}
+
+.social__be {
+    background-image: url(../assets/svg/be.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.social__be:hover {
+    background-color: $dark-grey;
+}
+
+.info {
+    position: relative;
+    margin-top: 24px;
+}
+
+.content__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.32em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.content__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 43px;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0.07em;
+    text-align: left;
+
+}
+
+.button {
+    //none
+}
+
+.button__main {
+    height: 48px;
+    width: 248px;
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../assets/svg/buttonsTexture.svg);
+    background-size: cover;
+    background-position: center;
+    border: 0.5px solid $dark-grey;
+}
+
+.button__main:hover {
+    background-color: $dark-grey;
+}
+
+.button__main-image {
+    width: 24px;
+    height: 24px;
+}
+
+.button__main-text {
+    margin-left: 16px;
+}
+
+.info__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.info__right-image {
+    max-width: 476px;
+}
+
+.mobile-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.mobile-social {
+    width: 264px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 91px;
+}
+
+@media screen and (min-width: $md) {
+    .mobile-social {
+        display: none;
+    }
+
+    .mobile-row {
+        display: none;
+    }
+
+    .social {
+        position: absolute;
+        top: 0px;
+        right: 12px;
+    }
+}
+
+@media screen and (max-width: $md) {
+    .button__main { 
+        width: 100%;
+        background-image: url(../assets/svg/mobileButtonsTexture.svg);
+    }
+
+    .social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $lg) {
+    .info__right {
+        margin-top: 48px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .about {
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,37 @@
+@import "_variable.scss";
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_reset.scss";
+
+* {
+    color: $white;
+}
+
+html {
+    background-size: cover;
+    background-position: bottom;
+}
+
+footer {
+    text-align: center;
+    margin: 48.5px 0px 24px 0px;
+}
+
+.copyright {
+    font-family: 'Sofia Sans Extra Condensed';
+    color: $dark-grey;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.07em;
+}
+
+p {
+    font-family: Agency;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.32em;
+    text-transform: none;
+}

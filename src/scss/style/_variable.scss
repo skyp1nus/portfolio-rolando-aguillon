@@ -15,11 +15,10 @@ $red-light: #D2295A;
 
 $container-max-widths: (
   sm: 540px,
-  md: 1150px,
-  lg: 1155px,
-  xl: 1160px,
+  md: 1100px,
+  lg: 1195px,
+  xl: 1200px,
   xxl: 1224px
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-// 1248 / 8 = 156 - 24 = 132

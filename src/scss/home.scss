@@ -1,9 +1,7 @@
-@import "_main.scss";
+@import "style/_main.scss";
 
 html {
     background-image: url(../assets/Images/background-home.png);
-    background-size: cover;
-    background-position: bottom;
 }
 
 .home {
@@ -449,18 +447,6 @@ html {
                     display: inline;
                 }
             }
-        }
-    }
-
-    footer {
-        .copyright {
-            font-family: 'Sofia Sans Extra Condensed';
-            color: $dark-grey;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 200%;
-            letter-spacing: 0.07em;
         }
     }
 }
