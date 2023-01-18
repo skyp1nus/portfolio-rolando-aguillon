@@ -1,30 +1,36 @@
-@import "style/_main.scss";
+@import "style/main.scss";
 
 html {
-    background-image: url(../assets/Images/background-about.png);
+    background-image: url(../assets/images/background-experience.png);
 }
 
-.about {
+.experience {
     position: relative;
     margin-top: 66px;
 }
 
 header {
-    position: relative;
+    margin-bottom: 68px;
 }
 
 .logo {
     height: 56px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.logo__title {
+.logo__text {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
     margin-left: 16px;
+}
+
+.logo__text-title {
     font-size: 30px;
     line-height: 36px;
     letter-spacing: 0.2em;
+    text-align: left;
+
 }
 
 .social {
@@ -70,37 +76,39 @@ header {
     background-color: $dark-grey;
 }
 
+.logo__title {
+    margin-left: 16px;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.2em;
+    text-align: left;
+}
+
 .info {
-    position: relative;
-    margin-top: 24px;
+    //none
 }
 
-.content__title {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 45px;
-    letter-spacing: 0.32em;
-    text-align: left;
-    text-transform: uppercase;
+.info__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.content__text {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 43px;
-    letter-spacing: 0.03em;
-    text-align: left;
+.info__content-image {
+    width: 306px;
+    height: 45px;
+}
 
+.info__content-text {
     font-size: 22px;
     font-weight: 400;
     line-height: 44px;
     letter-spacing: 0.07em;
     text-align: left;
-
 }
 
 .button {
-    //none
+    display: flex;
 }
 
 .button__main {
@@ -131,23 +139,51 @@ header {
     margin-left: 16px;
 }
 
-.info__right {
+.jobs {
+    margin-top: 64px;
+}
+
+.jobs__content {
+    // display: flex;
+}
+
+.block {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    height: 80px;
+    width: 288px;
 }
 
-.info__right-image {
-    max-width: 476px;
+.block__text {
+    margin-left: 16px;
 }
 
-.mobile-row {
+.text__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.2em;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0px;
+}
+
+.text__subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    white-space: nowrap;
+    margin: 0px;
+}
+
+.wrap__mobile {
+    margin-top: 48px;
     display: flex;
     justify-content: center;
-    margin-top: 48px;
 }
 
-.mobile-social {
+.mobile__social {
     width: 264px;
     height: 48px;
     display: flex;
@@ -155,50 +191,44 @@ header {
 }
 
 footer {
-    margin-top: 110px;
+    margin-top: 198px;
 }
 
+
 @media screen and (min-width: $md) {
-    .mobile-social {
-        display: none;
-    }
-
-    .mobile-row {
-        display: none;
-    }
-
     .social {
         position: absolute;
         top: 0px;
         right: 12px;
     }
-}
 
-@media screen and (max-width: $md) {
-    .button__main { 
-        width: 100%;
-        background-image: url(../assets/svg/mobileButtonsTexture.svg);
-    }
-
-    .social {
+    .wrap__mobile {
         display: none;
     }
 }
 
-@media screen and (max-width: $lg) {
-    .info__right {
-        margin-top: 48px;
-        justify-content: center;
-        align-items: center;
+@media screen and (min-width: $lg) {
+    .wrap__right {
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .button {
+    .wrap__center {
         display: flex;
         justify-content: center;
-        align-content: center;
+    }
+}
+
+@media screen and (max-width: $md){
+    .social {
+        display: none;
     }
 
-    .about {
-        margin-top: 16px;
+    .jobs {
+        margin-top: 48px;
+    }
+
+    footer {
+        margin-top: 32px;
     }
 }
