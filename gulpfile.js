@@ -4,6 +4,7 @@ const {watch, series, parallel, dest, src} = require('gulp');
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require('gulp-imagemin');
 const newer = require("gulp-newer");
+const concat = require('gulp-concat');
 
 const browserSync = require("browser-sync");
 const del = require("del");
@@ -25,6 +26,12 @@ const scss = () => {
         .pipe(sass().on('error', sass.logError))
         .pipe(dest(path.scss.dest))
         .pipe(browserSync.stream());
+}
+
+const js = () => {
+    return src([path.js.jquery, path.js.slick, path.js.src])
+    .pipe(concat('main.js'))
+    .pipe(dest(path.js.dest))
 }
 
 const images = () => {
@@ -56,6 +63,7 @@ const fonts = () => {
 const watcher = () => {
     watch(path.html.watch, html);
     watch(path.scss.watch, scss);
+    watch(path.js.watch, js);
     watch(path.images.watch, images);
     watch(path.svg.watch, svg);
 }
@@ -74,7 +82,7 @@ const clear = () => {
 
 exports.dev = series(
     clear,
-    series(html, scss, images, svg, fonts),
+    series(html, scss, js, images, svg, fonts),
     parallel(server, watcher)
 );
 

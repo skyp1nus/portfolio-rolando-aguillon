@@ -18,10 +18,18 @@ module.exports = {
         dest: pathDest + "/css"
     },
 
+    js: {
+        src: pathSrc + "/js/*.js",
+        watch: pathSrc + "/js/**/*.js",
+        jquery: "./node_modules/jquery/dist/jquery.min.js",
+        slick: "./node_modules/slick-carousel/slick/slick.js",
+        dest: pathDest + "/js"
+    },
+
     images: {
-        src: pathSrc + "/assets/images/*.png",
-        newer: pathDest + "/assets/images/*.png",
-        watch: pathSrc + "/assets/images/*.png",
+        src: pathSrc + "/assets/images/**/*.png",
+        newer: pathDest + "/assets/images/**/*.png",
+        watch: pathSrc + "/assets/images/**/*.png",
         dest: pathDest + "/assets/images"
     },
 
