@@ -1,4 +1,4 @@
-@import "style/main.scss";
+@import "./style/main.scss";
 
 html {
     background-image: url(../assets/images/background-experience.png);
@@ -84,10 +84,6 @@ header {
     text-align: left;
 }
 
-.info {
-    //none
-}
-
 .info__content {
     display: flex;
     flex-direction: column;
@@ -141,10 +137,6 @@ header {
 
 .jobs {
     margin-top: 64px;
-}
-
-.jobs__content {
-    // display: flex;
 }
 
 .block {
