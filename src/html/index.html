@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/assets/fonts/Lovtony-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Lovtony-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/fonts/Lovtony-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="./assets/svg/abouthover.svg">
+    <link rel="preload" as="image" href="./assets/svg/experiencehover.svg">
+    <link rel="preload" as="image" href="./assets/svg/workshover.svg">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="module" src="./js/preloader.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -81,6 +88,18 @@
         <footer class="col-8">
             <p class="copyright">Copyright © 2023 Rolando Aguillon. All rights reserved.</p>
         </footer>
+    </div>
+
+    <div id="preloader">
+        <p class="preloader__text">
+            Rolando Aguillon
+        </p>
+        <div class="preloader__loading">
+            <p class="loading__text">L O A D I N G</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+            <p class="dot">.</p>
+        </div>
     </div>
 </body>
 </html>
