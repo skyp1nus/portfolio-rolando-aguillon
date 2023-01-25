@@ -29,8 +29,10 @@ const scss = () => {
 }
 
 const js = () => {
-    return src([path.js.jquery, path.js.slick, path.js.src])
-    .pipe(concat('main.js'))
+    return src([path.js.jquery, path.js.slick, path.js.slider])
+    .pipe(concat('slick-slider.js'))
+    .pipe(dest(path.js.dest))
+    .pipe(src(path.js.preloader))
     .pipe(dest(path.js.dest))
 }
 

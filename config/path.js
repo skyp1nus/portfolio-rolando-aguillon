@@ -23,6 +23,8 @@ module.exports = {
         watch: pathSrc + "/js/**/*.js",
         jquery: "./node_modules/jquery/dist/jquery.min.js",
         slick: "./node_modules/slick-carousel/slick/slick.js",
+        slider: pathSrc + "/js/slick-slider.js",
+        preloader: pathSrc + "/js/preloader.js",
         dest: pathDest + "/js"
     },
 
