@@ -7,9 +7,16 @@
     color: $white;
 }
 
+html, body {
+    height: 100%;
+}
+
 html {
-    background-size: cover;
-    background-position: bottom;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999; 
 }
 
 footer {
