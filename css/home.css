@@ -4080,16 +4080,23 @@ a:link {
 }
 
 html {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-color: #999;
 }
 
 footer {
+  width: 100%;
+  height: 24px;
   text-align: center;
-  margin: 48.5px 0px 24px 0px;
 }
 
 .copyright {
+  margin: 0;
+  padding: 0;
   font-family: "Sofia Sans Extra Condensed";
   color: #5E5C61;
   font-style: normal;
@@ -4109,6 +4116,7 @@ p {
 }
 
 #preloader {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -4119,6 +4127,7 @@ p {
   align-items: center;
   justify-content: center;
   background: url(../assets/images/background-home.png);
+  cursor: wait;
 }
 
 #preloader.hide-preloader {
@@ -4144,10 +4153,9 @@ p {
 }
 
 .preloader__loading {
-  position: fixed;
+  position: absolute;
   right: 106px;
   bottom: 97px;
-  margin-top: 100px;
   display: flex;
   align-items: flex-end;
 }
@@ -4238,6 +4246,11 @@ p {
 }
 html {
   background-image: url(../assets/images/background-home.png);
+  overflow: hidden;
+}
+
+footer {
+  margin: 48px 0 24px 0 !important;
 }
 
 .home {
@@ -4340,7 +4353,7 @@ html {
   margin-top: 66px;
 }
 
-.content {
+.content__title {
   margin-left: 16px;
 }
 
@@ -4551,10 +4564,6 @@ html {
   height: 48px;
   display: flex;
   justify-content: space-between;
-}
-
-footer {
-  margin-top: 48px;
 }
 
 @media screen and (max-width: 768px) {

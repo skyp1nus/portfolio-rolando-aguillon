@@ -4080,16 +4080,23 @@ a:link {
 }
 
 html {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-color: #999;
 }
 
 footer {
+  width: 100%;
+  height: 24px;
   text-align: center;
-  margin: 48.5px 0px 24px 0px;
 }
 
 .copyright {
+  margin: 0;
+  padding: 0;
   font-family: "Sofia Sans Extra Condensed";
   color: #5E5C61;
   font-style: normal;
@@ -4109,7 +4116,11 @@ p {
 }
 
 html {
-  background-image: url(../assets/Images/background-about.png);
+  background-image: url(../assets/images/background-about.png);
+}
+
+footer {
+  margin-top: 90px;
 }
 
 .about {
@@ -4252,10 +4263,6 @@ header {
   height: 48px;
   display: flex;
   justify-content: space-between;
-}
-
-footer {
-  margin-top: 110px;
 }
 
 @media screen and (min-width: 768px) {
