@@ -1,8 +1,12 @@
-@import "./style/main.scss";
-@import "./style/preloader.scss";
+@import "./style/_main.scss";
+@import "./style/_preloader.scss";
 
 html {
     background-image: url(../assets/images/background-home.png);
+}
+
+footer {
+    margin: 48px 0 24px 0 !important;
 }
 
 .home {
@@ -107,7 +111,7 @@ html {
     margin-top: 66px;
 }
 
-.content {
+.content__title {
     margin-left: 16px;
 }
 
@@ -327,10 +331,6 @@ html {
     height: 48px;
     display: flex;
     justify-content: space-between;
-}
-
-footer {
-    margin-top: 48px;
 }
 
 @media screen and (max-width: $md) {

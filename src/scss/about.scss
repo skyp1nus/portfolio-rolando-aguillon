@@ -1,7 +1,11 @@
-@import "./style/main.scss";
+@import "./style/_main.scss";
 
 html {
     background-image: url(../assets/images/background-about.png);
+}
+
+footer {
+    margin-top: 90px;
 }
 
 .about {
@@ -148,10 +152,6 @@ header {
     height: 48px;
     display: flex;
     justify-content: space-between;
-}
-
-footer {
-    margin-top: 110px;
 }
 
 @media screen and (min-width: $md) {
