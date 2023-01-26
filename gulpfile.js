@@ -4,7 +4,6 @@ const {watch, series, parallel, dest, src} = require('gulp');
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require('gulp-imagemin');
 const newer = require("gulp-newer");
-const concat = require('gulp-concat');
 
 const browserSync = require("browser-sync");
 const del = require("del");
@@ -29,11 +28,7 @@ const scss = () => {
 }
 
 const js = () => {
-    return src([path.js.jquery, path.js.slick, path.js.slider])
-    .pipe(concat('slick-slider.js'))
-    .pipe(dest(path.js.dest))
-    .pipe(src(path.js.preloader))
-    .pipe(dest(path.js.dest))
+    return src(path.js.src).pipe(dest(path.js.dest))
 }
 
 const images = () => {
