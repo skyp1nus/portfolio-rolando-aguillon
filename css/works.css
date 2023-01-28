@@ -35,7 +35,7 @@
   --bs-warning: #FFE600;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: #2d3436;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -43,7 +43,7 @@
   --bs-warning-rgb: 255, 230, 0;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 45, 52, 54;
   --bs-primary-text: #0a58ca;
   --bs-secondary-text: #6c757d;
   --bs-success-text: #146c43;
@@ -185,8 +185,6 @@
   --bs-gutter-x: 24px;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -222,8 +220,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   box-sizing: border-box;
@@ -4080,16 +4076,12 @@ a:link {
 }
 
 html {
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: bottom;
   background-size: cover;
-  background-color: #999;
+  background-color: #2d3436;
 }
 
 footer {
-  width: 100%;
   height: 24px;
   text-align: center;
 }
@@ -4115,128 +4107,49 @@ p {
   text-transform: none;
 }
 
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
+@media screen and (min-width: 1500px) {
+  html {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
-
-.slick-list {
-  position: relative;
+.slider {
+  height: 514px;
+  max-width: 912px;
   overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.slick-track:before, .slick-track:after {
-  content: "";
-  display: table;
-}
-.slick-track:after {
-  clear: both;
-}
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  float: left;
+.carousel {
+  width: 100%;
   height: 100%;
-  min-height: 1px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.carousel::-webkit-scrollbar {
   display: none;
 }
-[dir=rtl] .slick-slide {
-  float: right;
+
+.carousel__item {
+  padding: 24px 0;
 }
-.slick-slide img {
-  display: block;
+
+.carousel__item:nth-child(1) {
+  padding-top: 0;
 }
-.slick-slide.slick-loading img {
-  display: none;
+
+.carousel__item:nth-child(16) {
+  padding-bottom: 0;
 }
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-.slick-vertical .slick-slide {
-  display: block;
+
+.carousel__img {
+  max-width: 100%;
   height: auto;
-  border: 1px solid transparent;
 }
 
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
-.slick-dots {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-}
-.slick-dots li {
-  display: inline-block;
-  margin: 0 4px;
-}
-.slick-dots button {
-  padding: 0;
-  border: none;
-  background-color: #5E5C61;
-  width: 4px;
-  height: 4px;
-  font-size: 0;
-  cursor: pointer;
-}
-.slick-dots button:hover, .slick-dots button:focus {
-  opacity: 0.8;
-}
-
-.slick-active button {
-  background-color: #FFFFFF;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .carousel__item {
     display: flex !important;
     justify-content: center;
@@ -4409,7 +4322,7 @@ header {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .social {
     position: absolute;
     top: 0px;
@@ -4419,7 +4332,7 @@ header {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .social {
     display: none;
   }

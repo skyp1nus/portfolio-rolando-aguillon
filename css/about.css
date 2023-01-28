@@ -35,7 +35,7 @@
   --bs-warning: #FFE600;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: #2d3436;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -43,7 +43,7 @@
   --bs-warning-rgb: 255, 230, 0;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 45, 52, 54;
   --bs-primary-text: #0a58ca;
   --bs-secondary-text: #6c757d;
   --bs-success-text: #146c43;
@@ -185,8 +185,6 @@
   --bs-gutter-x: 24px;
   --bs-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -222,8 +220,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   box-sizing: border-box;
@@ -4080,16 +4076,12 @@ a:link {
 }
 
 html {
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: bottom;
   background-size: cover;
-  background-color: #999;
+  background-color: #2d3436;
 }
 
 footer {
-  width: 100%;
   height: 24px;
   text-align: center;
 }
@@ -4115,6 +4107,13 @@ p {
   text-transform: none;
 }
 
+@media screen and (min-width: 1500px) {
+  html {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
 html {
   background-image: url(../assets/images/background-about.png);
 }
@@ -4265,7 +4264,7 @@ header {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .mobile-social {
     display: none;
   }
@@ -4278,7 +4277,7 @@ header {
     right: 12px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .button__main {
     width: 100%;
     background-image: url(../assets/svg/mobileButtonsTexture.svg);
