@@ -1,5 +1,4 @@
 @import "_variable.scss";
-@import "_mixin.scss";
 @import "_font.scss";
 @import "_reset.scss";
 
@@ -9,12 +8,11 @@
 
 html {
     background-position: bottom;
-    background-size:  cover;
+    background-size: cover;
     background-color: #2d3436; 
 }
 
 footer {
-    width: 100%;
     height: 24px;
     text-align: center;
 }
