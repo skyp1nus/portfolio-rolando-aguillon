@@ -11,7 +11,7 @@ function hiddenPreloading() {
           preloader.classList.add('preloader-hidden');
     }, 1990);
 
-    body.style.overflow = "scroll";
+    body.style.overflowY = "scroll";
 }
 
 waitingTime = setTimeout(hiddenPreloading, 3500);
