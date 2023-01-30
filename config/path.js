@@ -14,6 +14,7 @@ module.exports = {
 
     scss: {
         src: pathSrc + "/scss/*.scss",
+        animate: "./node_modules/animate.css/animate.min.css",
         watch: pathSrc + "/scss/**/*.scss",
         dest: pathDest + "/css"
     },
@@ -25,9 +26,9 @@ module.exports = {
     },
 
     images: {
-        src: pathSrc + "/assets/images/**/*.png",
-        newer: pathDest + "/assets/images/**/*.png",
-        watch: pathSrc + "/assets/images/**/*.png",
+        src: pathSrc + "/assets/images/**/*.{png,jpg}",
+        newer: pathDest + "/assets/images/**/*.{png,jpg}",
+        watch: pathSrc + "/assets/images/**/*.{png,jpg}",
         dest: pathDest + "/assets/images"
     },
 
