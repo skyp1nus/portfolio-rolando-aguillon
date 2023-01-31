@@ -1,3 +1,4 @@
+@import "animate.min.css";
 /*!
  * Bootstrap Grid v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -4076,6 +4077,7 @@ a:link {
 }
 
 html {
+  overflow-y: scroll;
   background-position: bottom;
   background-size: cover;
   background-color: #2d3436;
@@ -4226,6 +4228,7 @@ header {
   background-size: cover;
   background-position: center;
   border: 0.5px solid #5E5C61;
+  cursor: pointer;
 }
 
 .button__main:hover {
@@ -4248,7 +4251,8 @@ header {
 }
 
 .info__right-image {
-  max-width: 476px;
+  max-width: 100%;
+  height: auto;
 }
 
 .mobile-row {
@@ -4299,5 +4303,13 @@ header {
   }
   .about {
     margin-top: 16px;
+  }
+}
+@keyframes backgroundChange {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

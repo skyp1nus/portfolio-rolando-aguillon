@@ -1,3 +1,4 @@
+@import "animate.min.css";
 /*!
  * Bootstrap Grid v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -4076,6 +4077,7 @@ a:link {
 }
 
 html {
+  overflow-y: scroll;
   background-position: bottom;
   background-size: cover;
   background-color: #2d3436;
@@ -4119,19 +4121,22 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(../assets/images/background-home.png);
+  background-image: url(../assets/images/background-home.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #2d3436;
   cursor: wait;
 }
 
 #preloader.hide-preloader {
-  animation: hidePreloader 2s ease-in-out;
+  animation: hidePreloader 2s;
 }
 
 #preloader.preloader-hidden {
@@ -4246,6 +4251,7 @@ p {
 }
 html {
   background-image: url(../assets/images/background-home.png);
+  overflow: hidden;
 }
 
 footer {
@@ -4290,6 +4296,7 @@ footer {
   background-size: cover;
   background-position: center;
   border: 0.5px solid #5E5C61;
+  cursor: pointer;
 }
 
 .button-main:hover {
@@ -4409,6 +4416,7 @@ footer {
   margin-left: 16px;
   font-size: 30px;
   line-height: 56px;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-align: left;
 }
@@ -4447,6 +4455,7 @@ footer {
   margin: 0;
   margin-left: 16px;
   font-size: 30px;
+  font-weight: 700;
   line-height: 56px;
   letter-spacing: 0.2em;
   text-align: left;
@@ -4512,6 +4521,7 @@ footer {
   margin: 0;
   margin-left: 16px;
   font-size: 30px;
+  font-weight: 700;
   line-height: 56px;
   letter-spacing: 0.2em;
   text-align: left;
@@ -4644,5 +4654,13 @@ footer {
   }
   .wrap__mobile {
     display: none;
+  }
+}
+@keyframes backgroundChange {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
