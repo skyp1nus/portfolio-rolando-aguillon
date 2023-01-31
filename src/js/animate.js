@@ -117,7 +117,7 @@ function hiddenPreloading() {
     preloader.classList.add('hide-preloader');
     setInterval(function() {
           preloader.classList.add('preloader-hidden');
-    }, 1999);
+    }, 2000);
 
     body.style.overflowY = "scroll";
 }
