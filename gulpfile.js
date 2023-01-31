@@ -21,7 +21,7 @@ const html = () => {
 }
 
 const scss = () => {
-    return src(path.scss.src)
+    return src([path.scss.src, path.scss.animate])
         .pipe(sass().on('error', sass.logError))
         .pipe(dest(path.scss.dest))
         .pipe(browserSync.stream());

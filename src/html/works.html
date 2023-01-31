@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/works.css">
+    <script type="text/javascript" src="./js/animate.js"></script>
     <title>Works</title>
 </head>
 <body>
-    <div class="container works">
+    <div id="fadeOutDown" class="container works animate__animated animate__fadeInUp animate__delay-1s">
         <header class="row">
             <div class="col-xl-2">
                 <div class="logo">
@@ -87,7 +88,7 @@
                 <div class="stage-dots" id="stage-dots">
                 </div>
                 <div class="button">
-                    <a class="button__main"  href="index.html">
+                    <a class="button__main" onclick="backToHome('/index.html', '../assets/images/background-home.png')">
                         <img class="button__main-image" src="./assets/svg/home.svg">
                         <p class="button__main-text">BACK TO MAIN</p>
                     </a>

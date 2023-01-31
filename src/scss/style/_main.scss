@@ -1,3 +1,4 @@
+@import "animate.min.css";
 @import "_variable.scss";
 @import "_font.scss";
 @import "_reset.scss";
@@ -7,6 +8,7 @@
 }
 
 html {
+    overflow-y: scroll;
     background-position: bottom;
     background-size: cover;
     background-color: $dark; 

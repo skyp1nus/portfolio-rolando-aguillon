@@ -11,10 +11,10 @@
     <link rel="preload" as="image" href="./assets/svg/experiencehover.svg">
     <link rel="preload" as="image" href="./assets/svg/workshover.svg">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script language="JavaScript" type="text/javascript" src="./js/preloader.js"></script>
+    <script type="text/javascript" src="./js/animate.js"></script>
     <title>Home</title>
 </head>
-<body >
+<body>
     <div id="preloader">
         <p class="preloader__text">
             Rolando Aguillon
@@ -29,10 +29,10 @@
 
     <div class="container home">
         <header class="row">
-            <div class="col-md-4">
+            <div id="fadeLeft" class="col-md-4">
                 <p class="title">always walking<br>through way of heart...</p> 
                 <p class="subtitle">Welcome to the official page of Rolando Aguillon, who is incredibly passionate about creating things beyond of time and epoch together.</p>
-                <div class="button">
+                <div id="fadeLeft" class="button">
                     <a class="button-main" href="https://t.me/Aguillon_Esthetique">
                         <img src="./assets/svg/contact.svg" class="button-main__image">
                         <p class="button-main__text">GET  IN TOUCH</p>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="col-xl-2">
-                <div class="social">
+                <div id="fadeRight" class="social">
                     <a class="social__avatar"></a>
                     <a class="social__telegram" href="https://t.me/Aguillon_Esthetique"></a>
                     <a class="social__linkedin" href="https://www.linkedin.com/in/rolando-aguillon/"></a>
@@ -51,7 +51,7 @@
         
         <section class="preview row gy-4">
             <div class="col-md-4">
-                <a class="about" href="about.html">
+                <a id="fadeLeft" onclick="homeToRedirect('/about.html', '../assets/images/background-about.png')" class="about">
                     <p class="about__hover-text">ABOUT</p>
                     <div class="content__title">
                         <div class="about__title">
@@ -63,7 +63,7 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a class="experience" href="experience.html">
+                <a id="fadeRight" onclick="homeToRedirect('/experience.html', '../assets/images/background-experience.png')" class="experience">
                     <p class="experience__hover-text">EXPERIENCE</p>
                     <div class="content__title">
                         <div class="experience__title">
@@ -73,7 +73,7 @@
                         <p class="experience__subtitle">Short overview about career path</p>
                     </div>
                 </a>
-                <a class="works" href="works.html">
+                <a id="fadeRight" onclick="homeToRedirect('/works.html', '../assets/images/background-works.png')" class="works">
                     <p class="works__hover-text">WORKS</p>
                     <div class="content__title">
                         <div class="works__title">

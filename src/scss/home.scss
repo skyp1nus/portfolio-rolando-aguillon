@@ -3,6 +3,7 @@
 
 html {
     background-image: url(../assets/images/background-home.png);
+    overflow: hidden;
 }
 
 footer {
@@ -49,6 +50,7 @@ footer {
     background-size: cover;
     background-position: center;
     border: 0.5px solid $dark-grey;
+    cursor: pointer;
 }
 
 .button-main:hover {
@@ -431,4 +433,9 @@ footer {
     .wrap__mobile {
         display: none;
     }
+}
+
+@keyframes backgroundChange {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
