@@ -1,5 +1,7 @@
 const timeToRedirect = 1.3 * 1000;
 const timeToChangeBackground = 1;
+const timeToEnableScroll = 1 * 1000;
+const timeToHidePreload = 2 * 1000;
 const timeoutPreload = 3.5 * 1000;
 const timeoutStartAnimation = 3.7 * 1000;
 
@@ -87,12 +89,29 @@ function changeFadeOutDownNameClass() {
     });
 }
 
+function switchScroll() {
+    let html = document.querySelector('html');
+    let style = window.getComputedStyle ? getComputedStyle(html, null) : html.currentStyle;
+
+    console.log(style.overflowY.match("hidden") != null);
+
+    if (style.overflowY.match("hidden") != null) {
+        console.log("Enable");
+        setTimeout(() => { html.style.overflowY = "scroll"; }, 0);
+    } else {
+        console.log("Disable");
+        setTimeout(() => { html.style.overflowY = "hidden"; }, 0);
+    }
+}
+
 function homeStartAnimation() {
     changeLeftFadeInNameClass();
     changeRightFadeInNameClass();
+    switchScroll();
 }
 
 function homeToRedirect(url, imageUrl) {
+    switchScroll();
     changeLeftFadeOutNameClass();
     changeRightFadeOutNameClass();
     changeBackgroundImage(imageUrl);
@@ -112,22 +131,16 @@ function backToHome(url, imageUrl) {
 }
 
 function hiddenPreloading() {
-    let body = document.querySelector('html');
     let preloader = document.getElementById('preloader');
     preloader.classList.add('hide-preloader');
     setInterval(function() {
           preloader.classList.add('preloader-hidden');
-    }, 2000);
-
-    body.style.overflowY = "scroll";
+    }, timeToHidePreload);
 }
-
-preloadTime = setTimeout(hiddenPreloading, timeoutPreload);
-startAnimationTime = setTimeout(homeStartAnimation, timeoutStartAnimation);
 
 window.onload = () => {
     if (window.location.href.match('index.html') != null) {
-        preloadTime;
-        startAnimationTime;
+        setTimeout(hiddenPreloading, timeoutPreload);
+        setTimeout(homeStartAnimation, timeoutStartAnimation);
     }
 }
