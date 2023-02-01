@@ -172,6 +172,15 @@ header {
     }
 }
 
+@media screen and (max-width: $sm) {
+    html {
+        background-position: top;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-color: $black;
+    }
+}
+
 @media screen and (max-width: $md) {
     .button__main { 
         width: 100%;
