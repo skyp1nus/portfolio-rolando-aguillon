@@ -25,18 +25,17 @@
     display: none;
 }
 
-.preloader__text {
-    margin: 0;
-    font-family: Lovtony;
-    font-style: italic;
-    color: $white;
-    -webkit-text-stroke: 2px $white;
-    font-weight: 400;
-    font-size: 240px;
-    line-height: 200%;
-    letter-spacing: 0.04em;
-    transform: rotate(-15deg);
-    animation: text-fill 3s ease-out alternate infinite;
+.wrapper__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader__image {
+    max-width: 100%;
+    height: auto;
+    animation: text-fill 2s ease-out alternate infinite;
 }
 
 .preloader__loading {
@@ -79,7 +78,7 @@
 }
 
 @keyframes text-fill {
-    0% { opacity: 0.01; }
+    0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
