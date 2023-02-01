@@ -181,6 +181,10 @@ header {
     .social {
         display: none;
     }
+
+    .info__right-image {
+        content: url(../assets/images/rightPhotoMobile.png);
+    }
 }
 
 @media screen and (max-width: $lg) {
