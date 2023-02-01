@@ -40,6 +40,9 @@ p {
     text-transform: none;
 }
 
+.border-box {
+    border: 0.5px solid $dark-grey;
+}
 
 @media screen and (min-width: $xxll) {
     html {
