@@ -6,7 +6,7 @@ const timeoutPreload = 3.5 * 1000;
 const timeoutStartAnimation = 3.7 * 1000;
 
 function redirect(url) {
-    document.location.href = url;
+    document.location.href = '/portfolio-rolando-aguillon' + url;
 }
 
 function changeLeftFadeInNameClass() {
