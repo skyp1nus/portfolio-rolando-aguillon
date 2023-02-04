@@ -78,8 +78,3 @@ node_modules/
 
 # Built Visual Studio Code Extensions
 *.vsix
-
-#Local npm files
-node_modules/*
-package-lock.json
-public/*
