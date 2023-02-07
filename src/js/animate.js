@@ -139,7 +139,8 @@ function hiddenPreloading() {
 }
 
 window.onload = () => {
-    if (window.location.href.match('index.html') != null) {
+    if (window.location.href.match('index.html') != null || !window.location.href.match('about.html')
+        || !window.location.href.match('experience.html') || !window.location.href.match('works.html')) {
         setTimeout(hiddenPreloading, timeoutPreload);
         setTimeout(homeStartAnimation, timeoutStartAnimation);
     }
