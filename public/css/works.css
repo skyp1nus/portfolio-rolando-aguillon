@@ -4159,7 +4159,7 @@ html {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .works {
@@ -4236,7 +4236,7 @@ header {
 .side-top {
   width: 100%;
   height: 14px;
-  background-image: url(../assets/svg/FrameUp.svg);
+  background-image: url(../assets/svg/frameUp.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -4245,7 +4245,7 @@ header {
 .side-down {
   width: 100%;
   height: 14px;
-  background-image: url(../assets/svg/FrameDown.svg);
+  background-image: url(../assets/svg/frameDown.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -4258,6 +4258,35 @@ header {
   align-items: center;
 }
 
+.wrapper-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__stage {
+  padding-right: 10px;
+}
+
+.dot {
+  color: #FFFFFF;
+  margin: 0 5px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.dot:nth-child(1) {
+  color: #5E5C61;
+}
+
+.dot:nth-child(3) {
+  color: #5E5C61;
+}
+
 .slick {
   max-height: 514px;
   margin: 24px 0px;
@@ -4267,16 +4296,8 @@ header {
   width: inherit;
 }
 
-.stage-dots {
-  height: 4px;
-  margin: 24px 0px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 .button {
+  margin-top: 22px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -4289,7 +4310,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/svg/ButtonsTexture.svg);
+  background-image: url(../assets/svg/buttonsTexture.svg);
   background-size: cover;
   background-position: center;
   border: 0.5px solid #5E5C61;
@@ -4340,6 +4361,9 @@ header {
     padding: 10px 0;
     width: 328px;
     height: 184px;
+  }
+  .slider__stage {
+    display: none;
   }
   .side-top {
     background-image: url(../assets/svg/mobileFrameUp.svg);

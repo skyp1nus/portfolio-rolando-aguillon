@@ -4221,7 +4221,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/svg/ButtonsTexture.svg);
+  background-image: url(../assets/svg/buttonsTexture.svg);
   background-size: cover;
   background-position: center;
   border: 0.5px solid #5E5C61;
@@ -4295,6 +4295,8 @@ header {
     display: none;
   }
   .info__right-image {
+    height: 436px;
+    width: auto;
     content: url(../assets/images/rightPhotoMobile.png);
   }
 }
