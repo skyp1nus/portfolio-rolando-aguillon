@@ -1,7 +1,7 @@
 @import "./style/_main.scss";
 
 html {
-    background-image: url(../assets/images/background-about.png);
+    background-image: url(../assets/images/background-about.jpg);
 }
 
 footer {
@@ -182,7 +182,7 @@ header {
 }
 
 @media screen and (max-width: $md) {
-    .button__main { 
+    .button__main {
         width: 100%;
         background-image: url(../assets/svg/mobileButtonsTexture.svg);
     }
