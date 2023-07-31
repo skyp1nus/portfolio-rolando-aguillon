@@ -186,6 +186,8 @@
   --bs-gutter-x: 24px;
   --bs-gutter-y: 0;
   width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
@@ -221,6 +223,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   box-sizing: border-box;
@@ -4155,7 +4159,7 @@ p {
   }
 }
 html {
-  background-image: url(../assets/images/background-works.png);
+  background-image: url(../assets/images/bakcground-works.jpg);
 }
 
 footer {
